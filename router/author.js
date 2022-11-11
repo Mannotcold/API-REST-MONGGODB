@@ -7,4 +7,7 @@ const router = require("express").Router();
 //add author
 router.post("/",authorController.addAuthor);
 
+//Get all author
+router.get("/", authorController.getAllAuthor)
+
 module.exports = router; 
