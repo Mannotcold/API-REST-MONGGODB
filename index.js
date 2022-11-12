@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 const authurRouter = require("./router/author");
 dotenv.config(); 
 // //connect dâtbase
- mongoose.connect("process.env.monggodb", () => {
+ mongoose.connect("mongodb+srv://hoaiman:hoaiman@cluster0.v1wpxkq.mongodb.net/?retryWrites=true&w=majority", () => {
      console.log("connect to monggodb");
  })
 
