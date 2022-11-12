@@ -8,6 +8,5 @@ const router = require("express").Router();
 router.post("/",authorController.addAuthor);
 
 //Get all author
-router.get("/", authorController.getAllAuthor)
-
+router.get("/", authorController.getAllAuthor);
 module.exports = router; 
