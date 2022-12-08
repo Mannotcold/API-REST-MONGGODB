@@ -21,7 +21,30 @@ const authorController = {
              res.status(500).json(err);
          }
      
+    },
+
+    //get an author
+    getAnAuthor: async(req,res)=>{
+        try {
+            const authors = await Author.findById(req.params.id);
+            res.status(200).json(authors);
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    
+   },
+
+   //Update author
+   updateAuthor: async(req,res)=>{
+    try {
+        const authors = await Author.findById(req.params.id);
+        await authors.updateOne({$set: req.body})
+        res.status(200).json("Updated successfully!");
+    } catch (err) {
+        res.status(500).json(err);
     }
+
+},
 }
 
 

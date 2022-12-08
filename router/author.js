@@ -9,4 +9,9 @@ router.post("/",authorController.addAuthor);
 
 //Get all author
 router.get("/", authorController.getAllAuthor);
+
+//get an author
+router.get("/:id",authorController.getAnAuthor);
+//Update author
+router.put("/:id",authorController.updateAuthor)
 module.exports = router; 
